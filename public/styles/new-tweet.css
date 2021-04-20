@@ -7,6 +7,7 @@
 .form-top textarea {
   border: none;
   resize: none;
+  outline: none;
 }
 
 form div button {
