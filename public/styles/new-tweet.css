@@ -1,0 +1,22 @@
+.form-top {
+  border-bottom: 2px black solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-top textarea {
+  border: none;
+  resize: none;
+}
+
+form div button {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+}
+
+.form-bottom {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
