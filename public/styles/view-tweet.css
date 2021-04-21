@@ -1,0 +1,32 @@
+article footer .fas{
+  color: #4056A1;
+}
+
+article footer .fas:hover{
+  color: orange;
+}
+
+article footer{
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  padding: 20px 10px;
+  border: black 5px solid;
+  margin: 40px 0;
+}
+
+article header{
+  display: flex;
+  justify-content: space-between;
+}
+
+article header .fas {
+  color: #000000
+}
+
+article:hover {
+  box-shadow: 5px 5px 1px 0px #AAAAAA;
+}
