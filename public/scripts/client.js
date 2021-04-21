@@ -4,16 +4,22 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const loadTweets = function() {
+  $.get("/tweets", function(tweets) {
+    renderTweets(tweets);
+  });
+};
+
 const createTweetElement = function(tweet) {
-  console.log(tweet);
   const name = tweet.user.name;
   const handle = tweet.user.handle;
+  const avatar = tweet.user.avatars;
   const message = tweet.content.text;
   const time = timeago.format(tweet.created_at);
   const $tweet = $(`
   <article>
     <header>
-      <span><i class="fas fa-user"></i> ${name}</span>
+      <span><img src="${avatar}"/> ${name}</span>
       <span>${handle}</span>
     </header>
     <p>${message}</p>
@@ -40,31 +46,7 @@ const renderTweets = function(tweets) {
 
 
 $(document).ready(function() {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1473245023718
-    }
-  ];
 
-  renderTweets(data);
+  loadTweets();
+
 });
