@@ -83,7 +83,7 @@
       <p>If I have seen further it is by standing on the shoulders of giants</p>
       <hr>
       <footer>
-        10 days ago
+        <span class="date-stamp" datetime="2020-11-20T09:50:12Z"></span>
         <span>
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
@@ -100,7 +100,7 @@
       <p>If I have seen further it is by standing on the shoulders of giants</p>
       <hr>
       <footer>
-        10 days ago
+        <span class="date-stamp" datetime="1991-11-06T12:30:20Z"></span>
         <span>
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
@@ -109,6 +109,12 @@
       </footer>
     </article>
   </main>
+  <footer>
+    <script>
+      timeago.render(document.querySelectorAll('.date-stamp'));
+    </script>
+  </footer>
 </body>
+
 
 </html>
