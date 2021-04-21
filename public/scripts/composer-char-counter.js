@@ -11,6 +11,5 @@ $(document).ready(function() {
       $(counter).css('color', '#545149');
     }
 
-
   });
 });
