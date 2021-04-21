@@ -21,3 +21,9 @@ form div button {
   display: flex;
   justify-content: space-between;
 }
+
+.error-message {
+  border: red 3px solid;
+  color: red;
+  padding: 5px;
+}

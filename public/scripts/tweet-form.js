@@ -1,23 +1,26 @@
+const loadTweet = function(tweet) {
+  $.get("/tweets", function(tweets) {
+    renderTweets([tweets[tweets.length - 1]]);
+  });
+};
+
 $(document).ready(function() {
   $('.new-form').on('submit', function(event) {
     event.preventDefault();
+    const unserialized = $(this).find("textarea").val();
     const message = $(this).serialize();
-    console.log($(this));
 
-
-    if (message.length <= 5) {
-      alert("This is the police");
+    if (unserialized.length <= 0) {
+      alert("Your message is empty you naughty person!");
       return;
-    } else if (message.length > 145) {
-      alert("This is the police again");
-      console.log(message);
+    } else if (unserialized.length > 140) {
+      alert("Your message is over 140 chars you naughty person!");
       return;
     }
 
-    console.log("we got here");
-
     $.post("/tweets", message, function(event) {
-
+      $("#tweet-text").val("");
+      loadTweet();
     });
 
   });

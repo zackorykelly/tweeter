@@ -10,6 +10,12 @@ const loadTweets = function() {
   });
 };
 
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweet) {
   const name = tweet.user.name;
   const handle = tweet.user.handle;
@@ -22,7 +28,7 @@ const createTweetElement = function(tweet) {
       <span><img src="${avatar}"/> ${name}</span>
       <span>${handle}</span>
     </header>
-    <p>${message}</p>
+    <p>${escape(message)}</p>
     <hr>
     <footer>
       <span>${time}</span>
@@ -40,7 +46,7 @@ const createTweetElement = function(tweet) {
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }
 };
 
