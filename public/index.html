@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
 
-  <!-- Add in custom fonts -->
+  <!-- Add in custom google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
     rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome (used to add various icons to app) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" />
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="/styles/view-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/media-queries.css" type="text/css" />
 
-  <!-- External JS -->
+  <!-- External JS (jQuery and timeago which is used to display timestamps) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
     integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
@@ -52,18 +52,22 @@
     </div>
   </nav>
 
+  <!-- Header containing user image and name -->
   <header class="top-header">
     <div>
       <img src="/images/profile-hex.png">
     </div>
     <br>
     <div>
+      <!-- Insert desired user display name below -->
       <h2>Albus Dumbledore</h2>
     </div>
   </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+
+    <!-- New tweet form (and hidden error message area) -->
     <section class="new-tweet">
       <div class="error-message" style="display:none"></div>
       <form class="new-form" action="/tweets" method="POST">
@@ -80,22 +84,7 @@
 
     <section id="tweets-container">
 
-      <!-- <article>
-        <header>
-          <span><i class="fas fa-user"></i> Newton</span>
-          <span>@SirIsaac</span>
-        </header>
-        <p>If I have seen further it is by standing on the shoulders of giants</p>
-        <hr>
-        <footer>
-          <span class="date-stamp" datetime="2020-11-20T09:50:12Z"></span>
-          <span>
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </span>
-        </footer>
-      </article> -->
+      <!-- Upon page load, all tweets will load into this container, and after each post, the latest tweet will be added -->
 
     </section>
 
