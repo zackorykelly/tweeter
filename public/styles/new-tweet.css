@@ -1,3 +1,7 @@
+.new-tweet{
+  width: 100%;
+}
+
 .form-top {
   border-bottom: 2px black solid;
   display: flex;
@@ -26,4 +30,5 @@ form div button {
   border: red 3px solid;
   color: red;
   padding: 5px;
+  text-align: center;
 }

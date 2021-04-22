@@ -18,14 +18,14 @@ $(document).ready(function() {
     const message = $(this).serialize();
 
     if (unserialized.length <= 0) {
-      displayError("Tee hee!");
+      displayError("⚠️ Error! Message field must not be empty! ⚠️");
       return;
     } else if (unserialized.length > 140) {
-      displayError("Too hoo!");
+      displayError("⚠️ Error! Message must be 140 characters or less! ⚠️");
       return;
     }
 
-    $.post("/tweets", message, function(event) {
+    $.post("/tweets", message, function() {
       $("#tweet-text").val("");
       loadTweet();
     });

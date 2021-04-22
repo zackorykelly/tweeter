@@ -1,3 +1,7 @@
+#tweets-container {
+  width: 100%;
+}
+
 article footer .fas{
   color: #4056A1;
 }
@@ -7,7 +11,6 @@ article footer .fas:hover{
 }
 
 article footer{
-  width: 1000px;
   display: flex;
   justify-content: space-between;
 }
