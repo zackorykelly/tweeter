@@ -4,17 +4,24 @@ const loadTweet = function(tweet) {
   });
 };
 
+const displayError = function(message) {
+  $(".error-message").html(message);
+  $(".error-message").slideDown();
+};
+
 $(document).ready(function() {
+  $(".error-message").hide();
   $('.new-form').on('submit', function(event) {
+    $(".error-message").hide();
     event.preventDefault();
     const unserialized = $(this).find("textarea").val();
     const message = $(this).serialize();
 
     if (unserialized.length <= 0) {
-      alert("Your message is empty you naughty person!");
+      displayError("Tee hee!");
       return;
     } else if (unserialized.length > 140) {
-      alert("Your message is over 140 chars you naughty person!");
+      displayError("Too hoo!");
       return;
     }
 
