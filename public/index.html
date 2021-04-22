@@ -69,7 +69,9 @@
 
     <!-- New tweet form (and hidden error message area) -->
     <section class="new-tweet">
+      <!-- Error message hidden be default until error event reveals it -->
       <div class="error-message" style="display:none"></div>
+
       <form class="new-form" action="/tweets" method="POST">
         <div class="form-top">
           <label for="tweet-text">What are you humming about?</label>
@@ -80,6 +82,7 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+
     </section>
 
     <section id="tweets-container">
