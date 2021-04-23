@@ -1,11 +1,13 @@
- /* Desktop */
+ /* Desktop Version for 1024px and above */
  @media only screen and (min-width: 1024px) {
+   /* Set entire body to flex in order to push header to the left and keep the tweet form and container on the right */
   body {
     display: flex;
     justify-content: space-between;
   }
+
+  /* Give header and container space from the nav bar and equal spacing from eachother */
   .top-header {
-    padding: 20px 2%;
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -15,9 +17,11 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* In desktop version, navbar is separate from header, and darker colour requires lighter text for readability */
   nav {
     background-color: #4056A1;
     background-image: none;
-    color: #FFFFFF;
+    color: #EEEEEE;
   }
  }
