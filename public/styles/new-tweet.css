@@ -2,12 +2,14 @@
   width: 100%;
 }
 
+/* Bottom border creates line under textbox to separate typing area from submit button and counter */
 .form-top {
   border-bottom: 2px black solid;
   display: flex;
   flex-direction: column;
 }
 
+/* Clear default border from focused and blurred textbox as well as removing ability to resize */
 .form-top textarea {
   border: none;
   resize: none;
@@ -20,12 +22,14 @@ form div button {
   font-family: 'Bungee', sans-serif;
 }
 
+/* Flex to separate button from counter */
 .form-bottom {
   padding-top: 10px;
   display: flex;
   justify-content: space-between;
 }
 
+/* Error message is only displayed when an error is triggered, and is rehidden whenever Tweet is clicked */
 .error-message {
   border: red 3px solid;
   color: red;

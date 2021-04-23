@@ -2,23 +2,15 @@
   width: 100%;
 }
 
-article footer .fas{
-  color: #4056A1;
-}
-
-article footer .fas:hover{
-  color: orange;
-}
-
-article footer{
-  display: flex;
-  justify-content: space-between;
-}
-
+/* Margin above and below to separate tweets from eachother */
 article {
   padding: 20px 10px;
   border: black 5px solid;
   margin: 40px 0;
+}
+/* Add box shadow when hovering anywhere over a tweet element */
+article:hover {
+  box-shadow: 5px 5px 1px 0px #AAAAAA;
 }
 
 article header{
@@ -26,10 +18,15 @@ article header{
   justify-content: space-between;
 }
 
-article header .fas {
-  color: #000000
+/* Set default and hover colors for flag/retweet/like icons/buttons */ 
+article footer .fas{
+  color: #4056A1;
+}
+article footer .fas:hover{
+  color: orange;
 }
 
-article:hover {
-  box-shadow: 5px 5px 1px 0px #AAAAAA;
+article footer{
+  display: flex;
+  justify-content: space-between;
 }
