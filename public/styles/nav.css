@@ -2,12 +2,14 @@ nav {
   height: 120px;
   width: 100%;
   
+  /* In mobile view, nav colour and texture matches header, is changed for desktop view */
   background-color: blanchedalmond;
   background-image: url(../images/asfalt-dark.png);
 
   
   padding: 0 1.5em;
 
+  /* Separate logo and write new tweet button */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,12 +20,14 @@ nav {
   top: 0;
 }
 
+/* Custom Bungee font only used for tweeter logo */
 nav span{
   padding-top: 0.8em;
   font-family: 'Bungee', sans-serif;
   font-size: 150%;
 }
 
+/* Center text of the write a new tweet button incase it is displayed across multiple lines on a narrow screen */
 .write-new {
   display: flex;
   flex-direction: column;
@@ -31,7 +35,7 @@ nav span{
   text-align: center;
 }
 
-
+/* fas tag applies to icons */
 .fas {
   color: red;
 }
